@@ -1,1 +1,3 @@
-export const RAFFLE_URL: string = 'http://localhost:3009';
+export const DOMAIN_URL: string = 'https://blurpaper.com';
+
+export const RAFFLE_URL: string = `${DOMAIN_URL}:3009`;
