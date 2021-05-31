@@ -1,1 +1,208 @@
 /* You can add global styles to this file, and also import other style files */
+@import './assets//scss//variables.scss';
+
+html {
+    font-size: 17px;
+    font-family: 'Open Sans';
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    color: gray;
+    background-color: black;
+}
+
+.app-wrapper {
+    width: 75.3rem;
+}
+
+.margin-0-auto {
+    margin: 0 auto;
+}
+
+.flex {
+    display: flex;
+}
+
+.flex-column {
+    flex-direction: column;
+}
+
+.flex-0-0-auto {
+    flex: 0 0 auto;
+}
+
+.flex-1-1-auto {
+    flex: 1 1 auto;
+}
+
+.justify-content-center {
+    justify-content: center;
+}
+
+.align-items-center {
+    align-items: center;
+}
+
+.border-box {
+    box-sizing: border-box;
+}
+
+.mw-100 {
+    max-width: 100%;
+}
+
+.mh-100 {
+    max-height: 100%;
+}
+
+.mnh-3rem {
+    min-height: 3rem;
+}
+
+.mah-3rem {
+    max-height: 3rem;
+}
+
+.w-100 {
+    width: 100%;
+}
+
+.h-100 {
+    height: 100%;
+}
+
+.w-39rem {
+    width: 39rem;
+}
+
+.h-3rem {
+    height: 3rem;
+}
+
+.h-7rem {
+    height: 7rem;;
+}
+
+.fs-1-5rem {
+    font-size: 1.5rem;
+}
+
+.fs-2rem {
+    font-size: 2rem;
+}
+
+.fs-2-5rem {
+    font-size: 2.5rem;
+}
+
+.p-0 {
+    padding: 0;
+}
+
+.m-0 {
+    margin: 0;
+}
+
+.p-1rem {
+    padding: 1rem;
+}
+
+.p-0-1rem {
+    padding: 0 1rem;
+}
+
+.m-1rem {
+    margin: 1rem;
+}
+
+.mt-1rem {
+    margin-top: 1rem;
+}
+
+.mr-2rem {
+    margin-right: 2rem;
+}
+
+.cursor-pointer {
+    cursor: pointer;
+}
+
+.color-brand {
+    color: $blue-color !important;
+}
+
+.color-white {
+    color: $white-color !important;
+}
+
+.color-dark {
+    color: $dark-color !important;
+}
+
+.position-relative {
+    position: relative;
+}
+
+.position-absolute {
+    position: absolute;
+}
+
+.z-index-2 {
+    z-index: 2;
+}
+
+.txtarea-disable-resize {
+    resize: none;;
+}
+
+.no-border {
+    border: 0 solid;
+}
+
+.no-outline {
+    outline: none;
+}
+
+.opacity-half {
+    opacity: .5;
+}
+
+.bg-white {
+    background: $white-color;
+}
+
+.xy-minus-seven-thousand {
+    top: -7000px;
+    left: -7000px;
+}
+
+.switch-margin-right-2rem-0 {
+    margin-right: 2rem;
+}
+
+.switch-fs-2rem-1-5rem {
+    font-size: 2rem;
+}
+
+@media screen and (max-width: 768px) {
+    .switch-flex-direction {
+        flex-direction: column;
+    }
+
+    .switch-align-items {
+        align-items: center;
+    }
+
+    .switch-margin-right-2rem-0 {
+        margin-right: 0;
+    }
+
+    .switch-fs-2rem-1-5rem {
+        font-size: 1.5rem;
+    }
+}

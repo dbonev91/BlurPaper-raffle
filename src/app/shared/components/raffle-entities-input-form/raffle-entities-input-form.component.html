@@ -1,0 +1,65 @@
+<form
+  #form
+  [formGroup]="formGroup"
+  (ngSubmit)="onSubmit()"
+  class="
+    flex
+    justify-content-center
+    align-items-center
+    w-39rem
+    position-relative
+    mt-1rem
+    mw-100
+  "
+>
+  <div
+    class="
+      flex flex-column
+      align-items-center
+      position-absolute
+      z-index-2
+      p-0-1rem
+      border-box
+      w-100
+      h-100
+    "
+    [ngClass]="{ 'xy-minus-seven-thousand': isFormSubmitted }"
+  >
+    <label
+      [for]="textareaId"
+      class="switch-fs-2rem-1-5rem m-1rem flex-0-0-auto color-white"
+      >Въведи стойности:</label
+    >
+    <textarea
+      [formControlName]="textareaControlName"
+      [id]="textareaId"
+      class="
+        w-100
+        border-box
+        h-7rem
+        flex-1-1-auto
+        txtarea-disable-resize
+        no-border no-outline
+        p-1rem
+        opacity-half
+        fs-1-5rem
+      "
+      placeholder="Пример: едно, две, три, четири, пет, шест, седем"
+    ></textarea>
+    <button
+      class="
+        switch-fs-2rem-1-5rem
+        p-1rem
+        m-1rem
+        cursor-pointer
+        flex-0-0-auto
+        no-border
+        bg-white
+      "
+      [disabled]="!formGroup.valid"
+    >
+      Избери случаен победител!
+    </button>
+  </div>
+  <img #logo src="assets/images/BlurPaper - Logo.jpg" class="mw-100 w-100" />
+</form>

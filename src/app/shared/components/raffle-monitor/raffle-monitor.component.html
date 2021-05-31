@@ -1,0 +1,20 @@
+<div class="flex flex-column align-items-center">
+  <app-raffle-entities-input-form
+    *ngIf="!randEntityValue"
+    class="mw-100"
+    [textareaInputValue]="textareaValue"
+    (entitiesData)="handleEntitiesData($event)"
+  ></app-raffle-entities-input-form>
+  <div
+    *ngIf="randEntityValue"
+    class="flex flex-column justify-content-center mw-100"
+  >
+    <app-raffle-result [resultEntity]="randEntityValue"></app-raffle-result>
+    <button
+      (click)="backToForm()"
+      class="no-border bg-white fs-2rem p-1rem cursor-pointer"
+    >
+      Тегли отново
+    </button>
+  </div>
+</div>
