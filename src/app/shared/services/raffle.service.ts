@@ -1,17 +1,22 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { RAFFLE_URL } from '../constants';
 import { Observable } from 'rxjs';
+import { environment } from 'src/environments/environment';
+import { formatURL } from '../helpers/url/url.helper';
 
 @Injectable({
   providedIn: 'root',
 })
 export class RaffleService {
-  constructor(private http: HttpClient) {}
+  url: string;
+
+  constructor(private http: HttpClient) {
+    this.url = formatURL(environment.PAPER_RAFFLE_MICROSERVICE_PORT);
+  }
 
   getRandNumber(end: number, start: number = 0): Observable<any> {
     return this.http.get(
-      `${RAFFLE_URL}/get-rand-number-in-range/${end}/${start}`
+      `${this.url}/get-rand-number-in-range/${end}/${start}`
     );
   }
 }
