@@ -10,7 +10,11 @@ COPY ./ /usr/local/app/
 
 RUN npm install
 
-RUN npm run prod
+ARG ENVIRONMENT_NAME
+
+ENV ENVIRONMENT=$ENVIRONMENT_NAME
+
+RUN npm run ${ENVIRONMENT}
 
 # Stage 2: Serve the app with nginx server
 
@@ -18,6 +22,10 @@ FROM nginx:latest
 
 COPY --from=build /usr/local/app/dist/paper-raffle /usr/share/nginx/html
 
-COPY ./docker/dev/nginx.conf /etc/nginx/
+ARG ENVIRONMENT_NAME
+
+ENV ENVIRONMENT=$ENVIRONMENT_NAME
+
+COPY docker/dev/${ENVIRONMENT}.nginx.conf /etc/nginx/nginx.conf
 
 CMD ["nginx", "-g", "daemon off;"]
