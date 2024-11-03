@@ -1,6 +1,8 @@
 # Stage 1: Compile and Build Angular codebase
 
-FROM node:latest as build
+# Downgrade NodeJS 21 as a workaround for the ExperimentalWarning
+# Upgrade it when there is a fix version deployed
+FROM node:21 as build
 
 ENV NODE_OPTIONS=--openssl-legacy-provider
 
